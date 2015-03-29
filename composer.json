@@ -1,0 +1,25 @@
+{
+    "name": "happydemon/usrlastly",
+    "description": "A database interface package for Laravel",
+    "homepage": "http://github.com/happydemon/usrlastly",
+    "keywords": ["usr", "lastly", "last", "seen", "laravel", "user"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Maxim Kerstens",
+            "email": "maxim.kerstens@gmail.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/happyDemon/UsrLastly/issues"
+    },
+    "require": {
+        "php": ">=5.4.0",
+        "laravel/framework": "5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "HappyDemon\\UsrLastly": "src/"
+        }
+    }
+}

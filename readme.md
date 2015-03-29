@@ -85,7 +85,7 @@ We can do this in 3 steps:
 
  - Create a class that implements `HappyDemon\UsrLastly\User` with a `getUser()` method that returns a logged in user or false
  - Binding that class to laravel's container
- - Change `config/userlastly`'s `user_provider` key to name of that binding.
+ - Change `config/userlastly.php`'s `user_provider` key to name of that binding.
  
 You can check the docs for the worked out example.
  
@@ -102,4 +102,4 @@ dd($user->lastSeen());
 That method should return an object with 2 properties:
 
  - *date* which is a `Carbon` date object
- - *request* which holds information on where the user was
+ - *request*, an array which holds information on where the user was
