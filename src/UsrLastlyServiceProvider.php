@@ -38,7 +38,7 @@ class UsrLastlyServiceProvider extends ServiceProvider {
         });
 
         $this->app->singleton('UsrLastlyUserLaravel', function(){
-            return new HappyDemon\UsrLastly\Users\Laravel();
+            return new Users\Laravel();
         });
 
         $this->app->singleton('UsrLastlyUser', function(){
