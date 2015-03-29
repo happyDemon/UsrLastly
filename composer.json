@@ -1,6 +1,6 @@
 {
     "name": "happydemon/usrlastly",
-    "description": "A database interface package for Laravel",
+    "description": "Keep track of your users' last visit",
     "homepage": "http://github.com/happydemon/usrlastly",
     "keywords": ["usr", "lastly", "last", "seen", "laravel", "user"],
     "license": "MIT",
