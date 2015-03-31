@@ -12,7 +12,6 @@ class Eloquent extends Repository
     public function store($user, Request $request)
     {
         $meta = $this->prepareMeta($request);
-        $user = $user->getUser();
 
         $last_seen = $user->lastly ?: new Time();
 
