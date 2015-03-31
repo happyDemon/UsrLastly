@@ -12,11 +12,6 @@ trait LastSeenTrait {
         return $this->hasOne('HappyDemon\UsrLastly\Time', 'user_id');
     }
 
-    public function lastSeen()
-    {
-        return app('UsrLastlyRepository')
-            ->retrieve($this);
-    }
     public function getLastSeenAttribute()
     {
         return app('UsrLastlyRepository')
