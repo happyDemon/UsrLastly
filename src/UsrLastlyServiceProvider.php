@@ -32,9 +32,11 @@ class UsrLastlyServiceProvider extends ServiceProvider {
             __DIR__.'/../config/usrlastly.php', 'usrlastly'
         );
 
-        $this->app->bind('UsrLastlyRepository', function(){
-            $storage = '\HappyDemon\UsrLastly\Repositories\\' . ucfirst(config('usrlastly.storage', 'eloquent'));
-            return new $storage();
+        $this->app->bind('UsrLastlyStorageEloquent', '\HappyDemon\UsrLastly\Repositories\Eloquent');
+        $this->app->bind('UsrLastlyStorageRedis', '\HappyDemon\UsrLastly\Repositories\Redis');
+
+        $this->app->bind('UsrLastlyRepository', function($app){
+            return $app->make(config('usrlastly.storage', 'UsrLastlyStorageEloquent'));
         });
 
         $this->app->singleton('UsrLastlyUserLaravel', function(){
