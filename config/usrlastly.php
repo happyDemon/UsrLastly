@@ -1,8 +1,8 @@
 <?php
 
  return [
-     // either eloquent or redis
-     'storage' => 'eloquent',
+     // either UsrLastlyStorageEloquent or UsrLastlyStorageRdis are bundled by default
+     'storage' => 'UsrLastlyStorageEloquent',
 
      // This one is bundled, overwrite if you create your own
      'user_provider' => 'UsrLastlyUserLaravel',
