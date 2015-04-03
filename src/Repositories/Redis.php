@@ -37,9 +37,15 @@ class Redis extends Repository
     {
         $data = json_decode($this->storage->get('usr.' . $user->getKey() . '.lastSeen'));
 
-        // Make the stored date into Carbon object
-        $data->date = Carbon::createFromFormat('Y-m-d H:i:s', $data->date);
+         // Make the stored date into Carbon object
+        if ($data)
+        {
+            $data->date = Carbon::createFromFormat('Y-m-d H:i:s', $data->date);
 
+            return $data;
+        }
+        $data = json_decode('{"date":""}');
+        $data->date = Carbon::now();
         return $data;
     }
 }
