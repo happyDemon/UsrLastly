@@ -15,6 +15,8 @@ php artisan migrate
 
 That should have prepared your database and you should be ready.
 
+If you ever changed the `storage` key, you could reset it to `UsrLastlyStorageEloquent`.
+
 ### Redis
 
-This storage requires even less setup, all you have to do is open up `config/usrlastly.php` and change the `storage` key to `redis`
+This storage requires even less setup, all you have to do is open up `config/usrlastly.php` and change the `storage` key to `UsrLastlyStorageRedis`

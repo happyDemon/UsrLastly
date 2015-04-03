@@ -7,6 +7,21 @@ I wanted it to be simple by design, while keeping it easy to extend to fit your 
 
 With that in mind, I made it easy to define a storage (Redis & Database come bundled) and a user provider (Laravel's auth comes bundled).
 
+## Retrieving 'last seen' status
+ 
+Load your user like you would normally and call `lastSeen()`, as an example I'll just grab the first user in the database:
+
+```php
+$user = User::find(1);
+
+dd($user->lastSeen());
+```
+
+That method should return an object with 2 properties:
+
+ - *date* which is a `Carbon` date object
+ - *request*, an array which holds information on where the user was
+
 ## Installation
 First add the package to your composer file by runningthis command:
 
