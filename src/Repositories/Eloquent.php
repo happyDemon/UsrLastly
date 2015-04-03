@@ -23,6 +23,6 @@ class Eloquent extends Repository
 
     public function retrieve($user)
     {
-        return $user->lastly;
+        return $user->lastly ? new Time();
     }
 }
